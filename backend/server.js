@@ -1,9 +1,13 @@
 import express from 'express';
+import colors from 'colors';
 import goalRoutes from './routes/goalRoutes.js';
 import { errorHandler } from './middleware/errorMiddleware.js';
+import { connectDB } from './config/db.js';
 import dotenv from 'dotenv';
 dotenv.config();
 const port = process.env.BACKEND_PORT || 5000;
+
+connectDB();
 
 const app = express();
 
