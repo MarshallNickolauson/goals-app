@@ -75,13 +75,8 @@ export const loginUser = asyncHandler(async (req, res) => {
 // @desc    Get user data
 // @route   GET /api/users/me
 // @access  Private
-export const getMe = asyncHandler(async (req, res) => {
-    const { _id, name, email } = await User.findById(req.user.id); // Set in middleware
-    res.status(200).json({
-        id: _id,
-        name,
-        email
-    });
+export const getMe = asyncHandler(async (req, res) => {  
+    res.status(200).json(req.user);
 })
 
 // Generate JWT
