@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import colors from 'colors';
 
 export const connectDB = async () => {
     try {
@@ -6,8 +7,8 @@ export const connectDB = async () => {
         console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline);
     } catch (error) {
         console.log(error);
-        console.error("Add Mongo URI to .env!")
-        console.error("(Add JWT secret too)")
+        console.log("Add Mongo URI to .env!".red);
+        console.log("(Add JWT secret too)".red);
         process.exit(1);
     }
 }
