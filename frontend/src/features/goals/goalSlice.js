@@ -1,4 +1,3 @@
-// do things on your own
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import goalService from './goalService';
 
