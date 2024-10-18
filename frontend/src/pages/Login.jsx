@@ -42,7 +42,7 @@ const Login = () => {
         dispatch(login(userData));
     }
 
-    if (isLoading) <Spinner />
+    if (isLoading) return <Spinner />
 
     return (
         <div className='container'>
