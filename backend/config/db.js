@@ -6,6 +6,8 @@ export const connectDB = async () => {
         console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline);
     } catch (error) {
         console.log(error);
+        console.error("Add Mongo URI to .env!")
+        console.error("(Add JWT secret too)")
         process.exit(1);
     }
 }
